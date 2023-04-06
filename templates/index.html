@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>CryptoQuant Onchain Data</title>
+</head>
+<body>
+    <h1>CryptoQuant Onchain Data</h1>
+
+    <h2>Recommendation</h2>
+    <p>{{ recommendation }}</p>
+
+    <h2>Onchain Metrics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+                <th>Highest Value</th>
+                <th>Lowest Value</th>
+                <th>Distance from Top %</th>
+                <th>Risk</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Puell Multiple</td>
+                <td>{{ puell_multiple_data.current_value }}</td>
+                <td>{{ puell_multiple_data.highest_value }}</td>
+                <td>{{ puell_multiple_data.lowest_value }}</td>
+                <td>{{ puell_multiple_data.distance_from_top }}</td>
+                <td>{{ puell_multiple_data.risk }}</td>
+            </tr>
+            <tr>
